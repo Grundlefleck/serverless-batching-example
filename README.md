@@ -7,6 +7,13 @@ Background: [this tweet](https://twitter.com/BorisTane/status/156137611348142080
 
 To which I replied with a [guess](https://twitter.com/Grundlefleck/status/1561383960403480577).
 
+> First guess: route all messages to SQS with no consumers. Lambda on cron (/10m) that calls GetQueueAttributes and reads ApproximateNumberOfMsgs. Exit if < batchSize or continue and drain all the messages and process together.
+>
+> monitor AgeOfOldestMsg if latency is a concern.
+
+This repository is my attempt to turn that guess into a proof-of-concept.
+
+
 Alternatives suggested:
  - using SQS source for lambda and setting batch size 
  - tumbling windows
