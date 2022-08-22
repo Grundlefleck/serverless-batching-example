@@ -35,7 +35,7 @@ via the `GetQueueAttributes` SDK call, there would likely need to be a bit of cu
 oldest message even if the batch size hasn't been reached.
 
 ### Caveat emptor:
- - there are zero tests anywhere
+ - there are zero tests anywhere, the code is thrown together quickly without much care for style or design
  - message body size or a maximum batch size have not been taken into account; Lambda's configured memory is only 128Mb
  - costs have not been calculated or taken into account, would be shocked if it wasn't pennies a month
  - other approaches (Kinesis, Step Functions) have not been considered and could be superior
