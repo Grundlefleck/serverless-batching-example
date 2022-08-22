@@ -25,6 +25,8 @@ Entry points:
  - Lambda source code: `src/lambda/consume-batch-fn.ts`
  - Script to simulate events being received: `bin/simulate-receiving-events.ts`
 
+Also, see various screenshots stored in `img/` which show the processing in operation.
+
 ### What if it takes too long to reach the batch size? 
 If the rate of events being received drops, or stop being received entirely, a batch size < max is likely to be "stuck".
 Depending on how critical, this could either be handled in the Lambda, or alerted on. The current state is that a 
